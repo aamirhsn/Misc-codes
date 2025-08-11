@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "38fc8a6e-6c35-4a0f-ae68-3bffc43705e0",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26176317"
+	},
+	"item": [
+		{
+			"name": "Start Instance",
+			"protocolProfileBehavior": {
+				"disableCookies": false,
+				"followRedirects": true,
+				"strictSSL": false,
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "secretKey",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addAuthDataToQuery",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "service",
+							"value": "ec2",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "us-east-1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://ec2.us-east-1.amazonaws.com/?Action=StartInstances&Version=2016-11-15&InstanceId=i-0123456789",
+					"protocol": "https",
+					"host": [
+						"ec2",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "Action",
+							"value": "StartInstances"
+						},
+						{
+							"key": "Version",
+							"value": "2016-11-15",
+							"description": "The version of the API."
+						},
+						{
+							"key": "InstanceId",
+							"value": "i-0123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
